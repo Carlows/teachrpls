@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+
+    "name": "TeachrPls",
+    "description": "This extension automatically fills out UNITEC's voting form.",
+    "version": "0.1",
+
+    "permissions": [
+        "activeTab"
+    ],
+
+    "content_scripts": 
+    [
+        {
+            "matches":["http://www.unitec.edu.ve/evaluacion.jsp*"],
+            "js":["jquery-3.1.0.min.js", "fillForm.js"],
+            "run_at": "document_end"
+        }
+    ]
+}
